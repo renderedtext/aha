@@ -489,156 +489,54 @@ int main(int argc,char* args[])
 						printf("</span>");
 					if ((fc!=-1) || (bc!=-1) || (ul!=0) || (bo!=0) || (bl!=0))
 					{
-						if (stylesheet)
-							printf("<span class=\"");
-						else
-							printf("<span style=\"");
+						printf("<span class=\"");
 						switch (fc)
 						{
 							case	0: if (stylesheet)
 												 printf("dimgray ");
 											 else
-												 printf("color:dimgray;");
+												 printf("ansible_none");
 											 break; //Black
 							case	1: if (stylesheet)
 												 printf("red ");
 											 else
-												 printf("color:red;");
+												 printf("ansible_31");
 											 break; //Red
 							case	2: if (stylesheet)
 												 printf("green ");
-											 else if (colorshema!=1)
-												 printf("color:green;");
 											 else
-												 printf("color:lime;");
+												 printf("ansible_32");
 											 break; //Green
 							case	3: if (stylesheet)
 												 printf("yellow ");
-											 else if (colorshema!=1)
-												 printf("color:olive;");
 											 else
-												 printf("color:yellow;");
+												 printf("ansible_33");
 											 break; //Yellow
 							case	4: if (stylesheet)
 												 printf("blue ");
-											 else if (colorshema!=1)
-												 printf("color:blue;");
 											 else
-												 printf("color:#3333FF;");
+												 printf("ansible_34");
 											 break; //Blue
 							case	5: if (stylesheet)
 												 printf("purple ");
-											 else if (colorshema!=1)
-												 printf("color:purple;");
 											 else
-												 printf("color:fuchsia;");
+												 printf("ansible_35");
 											 break; //Purple
 							case	6: if (stylesheet)
 												 printf("cyan ");
-											 else if (colorshema!=1)
-												 printf("color:teal;");
 											 else
-												 printf("color:aqua;");
+												 printf("ansible_36");
 											 break; //Cyan
 							case	7: if (stylesheet)
 												 printf("white ");
-											 else if (colorshema!=1)
-												 printf("color:gray;");
 											 else
-												 printf("color:white;");
+												 printf("ansible_37");
 											 break; //White
 							case	9: if (stylesheet)
 												 printf("reset ");
-											 else if (colorshema!=1)
-												 printf("color:black;");
 											 else
-												 printf("color:white;");
+												 printf("ansible_39");
 											 break; //Reset
-						}
-						switch (bc)
-						{
-							case	0: if (stylesheet)
-												 printf("bg-black ");
-											 else
-												 printf("background-color:black;");
-											 break; //Black
-							case	1: if (stylesheet)
-												 printf("bg-red ");
-											 else
-												 printf("background-color:red;");
-											 break; //Red
-							case	2: if (stylesheet)
-												 printf("bg-green ");
-											 else if (colorshema!=1)
-												 printf("background-color:green;");
-											 else
-												 printf("background-color:lime;");
-											 break; //Green
-							case	3: if (stylesheet)
-												 printf("bg-yellow ");
-											 else if (colorshema!=1)
-												 printf("background-color:olive;");
-											 else
-												 printf("background-color:yellow;");
-											 break; //Yellow
-							case	4: if (stylesheet)
-												 printf("bg-blue ");
-											 else if (colorshema!=1)
-												 printf("background-color:blue;");
-											 else
-												 printf("background-color:#3333FF;");
-											 break; //Blue
-							case	5: if (stylesheet)
-												 printf("bg-purple ");
-											 else if (colorshema!=1)
-												 printf("background-color:purple;");
-											 else
-												 printf("background-color:fuchsia;");
-											 break; //Purple
-							case	6: if (stylesheet)
-												 printf("bg-cyan ");
-											 else if (colorshema!=1)
-												 printf("background-color:teal;");
-											 else
-												 printf("background-color:aqua;");
-											 break; //Cyan
-							case	7: if (stylesheet)
-												 printf("bg-white ");
-											 else if (colorshema!=1)
-												 printf("background-color:gray;");
-											 else
-												 printf("background-color:white;");
-											 break; //White
-							case	9: if (stylesheet)
-												 printf("bg-reset ");
-											 else if (colorshema==1)
-												 printf("background-color:black;");
-											 else if (colorshema==2)
-												 printf("background-color:pink;");
-											 else
-												 printf("background-color:white;");
-											 break; //Reset
-						}
-						if (ul)
-						{
-							if (stylesheet)
-								printf("underline ");
-							else
-								printf("text-decoration:underline;");
-						}
-						if (bo)
-						{
-							if (stylesheet)
-								printf("bold ");
-							else
-								printf("font-weight:bold;");
-						}
-						if (bl)
-						{
-							if (stylesheet)
-								printf("blink ");
-							else
-								printf("text-decoration:blink;");
 						}
 
 						printf("\">");
